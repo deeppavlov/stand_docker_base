@@ -6,16 +6,20 @@ WORKDIR /base
 
 RUN apt-get update && \
     apt-get -y install --only-upgrade bash && \
-    apt-get -y install git && \
     apt-get -y install software-properties-common && \
-    add-apt-repository -y ppa:jonathonf/python-3.6 && \
     add-apt-repository -y ppa:ubuntu-toolchain-r/test && \
     apt-get update && \
     apt-get -y install locales && locale-gen en_US.UTF-8 && locale-gen ru_RU.UTF-8 && \
+    apt-get -y install git && \
     apt-get -y install wget && \
+    apt-get -y install tar && \
     apt-get -y install gcc-6 g++-6 && \
-    apt-get -y install build-essential python3.6-dev libssl-dev zlib1g-dev libncurses5-dev libreadline-dev libgdbm-dev libdb5.3-dev libbz2-dev liblzma-dev libsqlite3-dev libffi-dev tcl-dev tk tk-dev && \
-    apt-get -y install python3.6
+    apt-get -y install build-essential libssl-dev zlib1g-dev libncurses5-dev libreadline-dev libgdbm-dev libdb5.3-dev libbz2-dev liblzma-dev libsqlite3-dev libffi-dev tcl-dev tk tk-dev && \
+    wget https://www.python.org/ftp/python/3.6.5/Python-3.6.5.tar.xz && \
+    tar xf Python-3.6.5.tar.xz && \
+    cd Python-3.6.5 && \
+    ./configure && \
+    make altinstall
 
 RUN wget https://bootstrap.pypa.io/get-pip.py && \
     python3.6 get-pip.py
