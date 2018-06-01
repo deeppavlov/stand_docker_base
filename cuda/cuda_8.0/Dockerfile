@@ -11,6 +11,8 @@ RUN apt-get update && \
     apt-get update && \
     apt-get -y install locales && locale-gen en_US.UTF-8 && locale-gen ru_RU.UTF-8 && \
     apt-get -y install git && \
+    git config --global user.email "litinsky@ipavlov.ai" && \
+    git config --global user.name "litinsky" && \
     apt-get -y install wget && \
     apt-get -y install tar && \
     apt-get -y install gcc-6 g++-6 && \
