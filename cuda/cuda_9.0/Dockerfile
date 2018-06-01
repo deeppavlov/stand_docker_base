@@ -1,5 +1,8 @@
 FROM nvidia/cuda:9.0-devel-ubuntu16.04
 
+ENV PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
+ENV LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
 WORKDIR /base
 
 # Install stand basic dependencies
