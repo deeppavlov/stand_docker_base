@@ -1,7 +1,7 @@
-FROM nvidia/cuda:9.1-devel-ubuntu16.04
+FROM nvidia/cuda:9.0-devel-ubuntu16.04
 
-ENV PATH=/usr/local/cuda-9.1/bin${PATH:+:${PATH}}
-ENV LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+ENV PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
+ENV LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 WORKDIR /base
 
@@ -36,10 +36,10 @@ ENV LANG='en_US.UTF-8' LANGUAGE='en_US.UTF-8' LC_ALL='en_US.UTF-8'
 
 # cuDNN7
 
-ENV CUDNN_VERSION 7.1.2.21
+ENV CUDNN_VERSION 7.1.4.18
 LABEL com.nvidia.cudnn.version="${CUDNN_VERSION}"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-            libcudnn7=$CUDNN_VERSION-1+cuda9.1 \
-            libcudnn7-dev=$CUDNN_VERSION-1+cuda9.1 && \
+            libcudnn7=$CUDNN_VERSION-1+cuda9.0 \
+            libcudnn7-dev=$CUDNN_VERSION-1+cuda9.0 && \
     rm -rf /var/lib/apt/lists/*

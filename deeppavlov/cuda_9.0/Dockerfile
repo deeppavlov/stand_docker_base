@@ -1,4 +1,4 @@
-FROM stand/docker_cuda:9.1
+FROM stand/docker_cuda:9.0
 
 WORKDIR /base
 
