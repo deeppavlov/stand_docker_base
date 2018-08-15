@@ -8,5 +8,7 @@ RUN apt-get update && \
     cd DeepPavlov && \
     git checkout dev && \
     python3.6 setup.py develop && \
-    python3.6 -m spacy download en && \
-    printf "import nltk\nnltk.download('punkt')" | python3.6
+    printf "import nltk\nnltk.download('punkt')" | python3.6 && \
+    printf "import nltk\nnltk.download('stopwords')" | python3.6 && \
+    printf "import nltk\nnltk.download('perluniprops')" | python3.6 && \
+    printf "import nltk\nnltk.download('nonbreaking_prefixes')" | python3.6

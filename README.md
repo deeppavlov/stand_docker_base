@@ -22,7 +22,4 @@
 
     sudo docker build -t stand/docker_cuda:9.0 cuda/cuda_9.0/
     sudo docker build -t stand/docker_deeppavlov:cuda-9.0 deeppavlov/cuda_9.0/
-    
-    sudo docker build -t stand/docker_cuda:9.1 cuda/cuda_9.1/
-    sudo docker build -t stand/docker_deeppavlov:cuda-9.1 deeppavlov/cuda_9.1/
     ```
