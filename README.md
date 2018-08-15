@@ -23,3 +23,13 @@
     sudo docker build -t stand/docker_cuda:9.0 cuda/cuda_9.0/
     sudo docker build -t stand/docker_deeppavlov:cuda-9.0 deeppavlov/cuda_9.0/
     ```
+5. Build DeepPavlov Jupyter server Docker images:
+    ```
+    sudo docker build -t stand/docker_cuda:9.0 cuda/cuda_9.0/
+    sudo docker build -t stand/docker_deeppavlov:cuda-9.0 deeppavlov/cuda_9.0/
+    sudo docker build -t stand/docker_deeppavlov_jupyter:cuda-9.0 deeppavlov/cuda_9.0_jupyter/
+    ```
+    Run DeepPavlov Jupyter server:
+    ```
+    sudo docker run -p 8888:8888 stand/docker_deeppavlov_jupyter:cuda-9.0
+    ```
