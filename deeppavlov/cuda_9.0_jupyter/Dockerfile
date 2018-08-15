@@ -1,4 +1,4 @@
-FROM stand/docker_deeppavlov:cuda-9.0_jup
+FROM stand/docker_deeppavlov:cuda-9.0
 
 WORKDIR /base
 
