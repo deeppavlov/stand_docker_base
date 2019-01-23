@@ -33,3 +33,7 @@
     ```
     sudo docker run -p 8888:8888 stand/docker_deeppavlov_jupyter:cuda-9.0
     ```
+
+# License
+
+Apache 2.0 - licensed.
